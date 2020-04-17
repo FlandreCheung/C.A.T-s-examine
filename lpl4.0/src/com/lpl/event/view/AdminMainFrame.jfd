@@ -1,0 +1,27 @@
+JFDML JFormDesigner: "7.0.1.0.272" Java: "11.0.5" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :p:40:p, comp userManageButton:::p:100:p, space :p:59:p, comp matchManageButton:::p:100:p, space ::44:x}}"
+			"$verticalGroup": "par l {seq l {space :p:69:p, par b {comp userManageButton::b:p:47:p, comp matchManageButton::b:p:47:p}, space ::77:x}}"
+		} ) {
+			name: "this"
+			"title": "Admin Main Frame"
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "userManageButton"
+				"text": "管理用户"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "userManageButtonActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "matchManageButton"
+				"text": "管理赛事"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "matchManageButtonActionPerformed", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 395, 220 )
+			"size": new java.awt.Dimension( 345, 225 )
+		} )
+	}
+}

@@ -1,0 +1,48 @@
+JFDML JFormDesigner: "7.0.1.0.272" Java: "11.0.5" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {par l {seq {space :p:107:p, par l:::p {comp addTeam1::::144:x, comp addTeam2::l::144:x, comp setPrice::l::144:x}, space :::p, par l:::p {comp addTeam2TextField::::84:x, comp addTeam1TextField::::84:x, comp setPriceTextField::::84:x}}, seq l {space :p:164:p, comp button1:::p:116:p}}, space ::42:x}}"
+			"$verticalGroup": "par l {seq l {space :p:53:p, par l:::p {comp addTeam1::::38:x, comp addTeam1TextField::::38:x}, space :p:33:p, par l:::p {comp addTeam2::::40:x, comp addTeam2TextField::::40:x}, space :p:31:p, par l:::p {comp setPrice::::44:x, comp setPriceTextField::::44:x}, space :p:58:p, comp button1:::p:44:p, space ::12:x}}"
+		} ) {
+			name: "this"
+			"title": "Add Match"
+			"iconImage": new com.jformdesigner.model.SwingIcon( 0, "/images/票务系统.png" )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "addTeam1"
+				"text": "添加主队"
+				"font": new java.awt.Font( "微软雅黑", 1, 20 )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "addTeam2"
+				"text": "添加副队"
+				"font": new java.awt.Font( "微软雅黑", 1, 20 )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "setPrice"
+				"text": "设定票价"
+				"font": new java.awt.Font( "微软雅黑", 1, 20 )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "addTeam1TextField"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "addTeam2TextField"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "setPriceTextField"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "添加"
+				"font": new java.awt.Font( "微软雅黑", 1, 20 )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "submitMatchInfo", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 470, 185 )
+			"size": new java.awt.Dimension( 385, 385 )
+		} )
+	}
+}

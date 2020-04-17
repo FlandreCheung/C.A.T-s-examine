@@ -1,0 +1,88 @@
+JFDML JFormDesigner: "7.0.1.0.272" Java: "11.0.6" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq t {space :0:61:x, comp scrollPane1:::p:685:p, space ::52:x}, seq t {space :p:49:p, comp addMatchButton:::p::p, space ::181:x, par l {comp updateTeam2Label:::p::p, comp updateTeam1Label:::p::p, comp updatePriceLabel:::p::p}, space :p:30:p, par l:::p {comp updateTeam1TF::::166:x, comp updateTeam2TF::::166:x, comp updatePriceTF::::166:x}, space :p:84:p, par l {comp updateMatchButton:::p::p, comp deleteMatchButton:::p::p}, space :p:76:p}}"
+			"$verticalGroup": "par l {seq l {space :p:61:p, comp scrollPane1:::p:233:p, space :p:55:p, par b {comp updateMatchButton::b:p::p, comp updateTeam1TF::b:p::p, comp updateTeam1Label::b:p::p}, space s:::p, par b {comp updateTeam2TF::b:p:30:p, comp updateTeam2Label::b:p::p}, space u:::x, par b {comp addMatchButton::b:p::p, comp deleteMatchButton::b:p::p, comp updatePriceTF::b:p::p, comp updatePriceLabel::b:p::p}, space :p:32:p}}"
+		} ) {
+			name: "this"
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "matchInfoTable2"
+					"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector {
+						add( new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						} )
+					}, new java.util.Vector {
+						add( "赛事编号" )
+						add( "主队" )
+						add( "副队" )
+						add( "票价" )
+					}, new java.util.Vector {
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+					}, new java.util.Vector {
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+					}, new java.util.Vector {
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+					} )
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "matchInfoTable2MouseClicked", true ) )
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "addMatchButton"
+				"text": "添加赛事"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "addMatchButtonActionPerformed", true ) )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "addMatchButtonActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "updateMatchButton"
+				"text": "修改赛事"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "updateMatchButtonActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "deleteMatchButton"
+				"text": "删除赛事"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "deleteMatchButtonActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "updateTeam1TF"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "updateTeam2TF"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "updatePriceTF"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "updateTeam1Label"
+				"text": "修改主队"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "updateTeam2Label"
+				"text": "修改副队"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "updatePriceLabel"
+				"text": "修改票价"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 275, 150 )
+			"size": new java.awt.Dimension( 800, 535 )
+		} )
+	}
+}

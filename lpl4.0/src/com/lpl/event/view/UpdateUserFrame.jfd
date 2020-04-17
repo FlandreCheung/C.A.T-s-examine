@@ -1,0 +1,43 @@
+JFDML JFormDesigner: "7.0.1.0.272" Java: "11.0.5" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {par l {seq {space :p:33:p, par l:::p {comp updateUserNameLabel::::95:x, comp updatePasswordLabel::l:p:84:p, comp updateRePasswordLabel::l::95:x}, space s:::p, par l:::p {comp updateUMTextField::::154:x, comp updatePWTextField::::154:x, comp updateRPWTextField::l::154:x}}, seq l {space :p:144:p, comp updateButton:::p:102:p}}, space ::98:x}}"
+			"$verticalGroup": "par l {seq l {space :p:47:p, par b {comp updateUserNameLabel::b:p:27:p, comp updateUMTextField::b:p::p}, space :p:28:p, par l:::p {comp updatePWTextField::::28:x, comp updatePasswordLabel::::28:x}, space :p:20:p, par l {comp updateRePasswordLabel:::p:30:p, seq {space :1:1:p, comp updateRPWTextField:::p:30:p}}, space s:::p, comp updateButton:::p::p, space ::36:x}}"
+		} ) {
+			name: "this"
+			"title": "Update User"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "updateUserNameLabel"
+				"text": "请输入新用户名"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "updatePasswordLabel"
+				"text": "请输入新密码"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "updateRePasswordLabel"
+				"text": "请输入确认密码"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "updateButton"
+				"text": "修改"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "updateButtonActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "updateUMTextField"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "updatePWTextField"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "updateRPWTextField"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 420, 215 )
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}

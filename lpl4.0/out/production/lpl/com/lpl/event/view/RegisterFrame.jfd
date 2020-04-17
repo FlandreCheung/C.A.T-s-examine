@@ -1,0 +1,54 @@
+JFDML JFormDesigner: "7.0.1.0.272" Java: "11.0.5" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :p:99:p, par l:::p {comp userNameLabel:::::x, comp passwordLabel::t:::x, comp rePasswordLabel::l:p:138:p}, space :::p, par l {comp rePasswordTextField:::::x, seq {par l {comp userNameTextField:::p:250:p, comp confirmedButton:::p:144:p}, space :0:0:x}, comp passwordTextField::l:::x}, space :p:125:p}, seq t {space :::x, comp infoLabel:::p:201:p, space :p:202:p}}"
+			"$verticalGroup": "par l {seq l {space :p:50:p, comp infoLabel:::p:34:p, space :p:52:p, par l:::p {comp userNameLabel::::35:x, comp userNameTextField::::35:x}, space :p:41:p, par b {comp passwordLabel::b:p:43:p, comp passwordTextField::b:p::p}, space :p:29:p, par b {comp rePasswordLabel::b:p:49:p, comp rePasswordTextField::b:p::p}, space :p:57:p, comp confirmedButton:::p:40:p, space ::78:x}}"
+		} ) {
+			name: "this"
+			"title": "RegisterFrame"
+			"iconImage": new com.jformdesigner.model.SwingIcon( 0, "/images/票务系统.png" )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "infoLabel"
+				"text": "新召唤师玩家注册"
+				"font": new java.awt.Font( "微软雅黑", 1, 20 )
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/images/注册.png" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "userNameLabel"
+				"text": "请输入用户名"
+				"font": new java.awt.Font( "微软雅黑", 1, 18 )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "passwordLabel"
+				"text": "请输入密码"
+				"font": new java.awt.Font( "微软雅黑", 1, 18 )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "rePasswordLabel"
+				"text": "请输入确认密码"
+				"font": new java.awt.Font( "微软雅黑", 1, 18 )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "userNameTextField"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "passwordTextField"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "rePasswordTextField"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "confirmedButton"
+				"text": "提交"
+				"font": new java.awt.Font( "微软雅黑", 1, 18 )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "confirmedButtonActionPerformed", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 260, 110 )
+			"size": new java.awt.Dimension( 620, 540 )
+		} )
+	}
+}

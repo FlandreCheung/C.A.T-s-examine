@@ -1,0 +1,29 @@
+JFDML JFormDesigner: "7.0.1.0.272" Java: "11.0.5" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {par l {seq {space :p:20:p, comp rechargeLabel:::p:120:p, space u:::p, comp rechargeTextField:::p:86:p}, seq l {space :p:93:p, comp rechargeButton:::p::p}}, space ::35:x}}"
+			"$verticalGroup": "par l {seq l {space :p:34:p, par l:::p {comp rechargeLabel::::33:x, comp rechargeTextField::::33:x}, space ::31:x, comp rechargeButton:::p::p, space :p:25:p}}"
+		} ) {
+			name: "this"
+			"title": "Recharge"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "rechargeLabel"
+				"text": "请输入要充值的金额"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "rechargeTextField"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "rechargeButton"
+				"text": "充值"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "rechargeButtonActionPerformed", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 430, 190 )
+			"size": new java.awt.Dimension( 275, 185 )
+		} )
+	}
+}

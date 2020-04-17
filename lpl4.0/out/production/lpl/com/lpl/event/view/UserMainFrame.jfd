@@ -1,0 +1,155 @@
+JFDML JFormDesigner: "7.0.1.0.272" Java: "11.0.6" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :p:84:p, par l {seq l {par t:::p {comp scrollPane2::l::860:x, seq l {comp Search:::p::p, space s:::p, comp SearhForTeam:::p:345:p, space :p:36:p, comp searchButton:::p:108:p}, comp scrollPane1::l::860:x}, space :0:39:x}, seq l {comp matchIdLabel:::p::p, space s:::p, comp matchIdTF:::p:59:p, space :p:84:p, comp priceLabel:::p::p, space s:::p, comp priceTF:::p:61:p, space ::315:x, comp bookTicketButton:::p:94:p, space :p:178:p}}}, seq t {space ::713:x, comp cancelButton:::p::p, space :p:164:p}}"
+			"$verticalGroup": "par l {seq l {space :p:23:p, par b {comp Search::b:p:35:p, comp SearhForTeam::b::35:x, comp searchButton::b:p:35:p}, space s:::p, comp scrollPane1:::p:167:p, par l {seq {space s:::p, par b {comp matchIdLabel::b:p::p, comp matchIdTF::b:p::p, comp priceLabel::b:p::p, comp priceTF::b:p::p}}, seq l {space :p:10:p, comp bookTicketButton:::p::p}}, space :::p, comp scrollPane2:::p:192:p, space u:::p, comp cancelButton:::p::p, space :p:15:p}}"
+		} ) {
+			name: "this"
+			"iconImage": new com.jformdesigner.model.SwingIcon( 0, "/images/票务系统.png" )
+			"title": "Main Frame"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "Search"
+				"text": "请输入战队名查询赛事信息"
+				"font": new java.awt.Font( "微软雅黑", 0, 22 )
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/images/查询.png" )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "SearhForTeam"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "searchButton"
+				"text": "查询"
+				"font": new java.awt.Font( "Microsoft YaHei UI", 1, 18 )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "searchButtonActionPerformed", true ) )
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "matchInfoTable"
+					"autoResizeMode": 4
+					"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector {
+						add( "赛事编号" )
+						add( "主队" )
+						add( "客队" )
+						add( "票价" )
+					}, new java.util.Vector {
+						add( class java.lang.Integer )
+						add( class java.lang.String )
+						add( class java.lang.String )
+						add( class java.lang.Integer )
+					}, new java.util.Vector {
+						add( false )
+						add( false )
+						add( false )
+						add( false )
+					}, new java.util.Vector {
+						add( new com.jformdesigner.model.SwingTableColumn( null, 0, 0, 0, false ) )
+						add( new com.jformdesigner.model.SwingTableColumn( null, 0, 0, 0, false ) )
+						add( new com.jformdesigner.model.SwingTableColumn( null, 0, 0, 0, false ) )
+						add( new com.jformdesigner.model.SwingTableColumn( null, 0, 0, 0, false ) )
+					} )
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "matchInfoTableMouseClicked", true ) )
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "bookTicketButton"
+				"text": "预定选中赛事"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "bookTicketButtonActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "matchIdLabel"
+				"text": "赛事编号"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "priceLabel"
+				"text": "票价"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "matchIdTF"
+				"editable": false
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "priceTF"
+				"editable": false
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane2"
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "bookedMatchInfoTable"
+					"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector {
+						add( new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						} )
+					}, new java.util.Vector {
+						add( "赛事编号" )
+						add( "主队" )
+						add( "副队" )
+						add( "票价" )
+					}, new java.util.Vector {
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+					}, new java.util.Vector {
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+					}, new java.util.Vector {
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+					} )
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "bookedMatchInfoTableMouseClicked", true ) )
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "cancelButton"
+				"text": "退订选中赛事"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "cancelButtonActionPerformed", true ) )
+			} )
+			menuBar: new FormContainer( "javax.swing.JMenuBar", new FormLayoutManager( class javax.swing.JMenuBar ) ) {
+				name: "userInfoBar"
+				"toolTipText": "操作"
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "operateMenu"
+					"text": "操作"
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "resetInfoItem"
+						"text": "修改用户名/密码"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "resetInfoItemActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "searchBalanceMenu"
+						"text": "查询余额"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "searchBalanceMenuActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "rechargeMenu"
+						"text": "充值余额"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "rechargeMenuActionPerformed", true ) )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "rechargeMenuActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "manageMenu"
+						"text": "管理已预订的比赛"
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "menuItem4"
+						"text": "升级为VIP用户"
+					} )
+				} )
+			}
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 110, 20 )
+			"size": new java.awt.Dimension( 985, 605 )
+		} )
+	}
+}
